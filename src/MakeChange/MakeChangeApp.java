@@ -8,7 +8,7 @@ public class MakeChangeApp {
 		Scanner kb = new Scanner(System.in);
 		System.out.println("What is the price of the item? ");
 		double cost = kb.nextDouble();
-		System.out.println("Amount of money recived? ");
+		System.out.println("Amount of money received? ");
 		double tender = kb.nextDouble();
 		System.out.println(changeCalc(cost, tender));
 
@@ -52,11 +52,11 @@ public class MakeChangeApp {
 				dime++;
 				changeDue -= .10;
 			}
-			while (changeDue >= .05) {
+			while (changeDue >= .049) {
 				nickle++;
 				changeDue -= .05;
 			}
-			while (changeDue >= .01) {
+			while (changeDue >= .009) {
 				penny++;
 				changeDue -= .01;
 			}
