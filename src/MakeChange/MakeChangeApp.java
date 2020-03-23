@@ -23,7 +23,8 @@ public class MakeChangeApp {
 			System.out.println("Thank you for your purchase.");
 		} else if (tender > cost) {
 			changeDue = tender - cost;
-			System.out.println("Your change is: " + changeDue);
+			String change = String.format("%.2f", changeDue);
+			System.out.println("Your change is: " + change);
 
 			while (changeDue >= 20) {
 				twenty++;
@@ -58,7 +59,7 @@ public class MakeChangeApp {
 				changeDue -= .25;
 			}
 			if (quarter > 0) {
-				System.out.print(quarter + " quarters ");
+				System.out.print(quarter + " quarter(s) ");
 			}
 			while (changeDue >= .10) {
 				dime++;
@@ -106,14 +107,14 @@ public class MakeChangeApp {
 				double tender = kb.nextDouble();
 				changeCalc(cost, tender);
 
-				System.out.println("\n1" + "What would you like to do?");
+				System.out.println("\n\n" + "What would you like to do?");
 				System.out.println("1. Run cash register.");
 				System.out.println("0. Exit the program.");
 				action = kb.nextInt();
 			}
 			else{
 				System.out.println("Please select a valid option.");
-				System.out.println("\n1" + "What would you like to do?");
+				System.out.println("\nl\nl" + "What would you like to do?");
 				System.out.println("1. Run cash register.");
 				System.out.println("0. Exit the program.");
 				action = kb.nextInt();
