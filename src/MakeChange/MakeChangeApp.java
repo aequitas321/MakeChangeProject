@@ -38,7 +38,7 @@ public class MakeChangeApp {
 				changeDue -= 10;
 			}
 			if (ten > 0) {
-				System.out.print(ten + " tens ");
+				System.out.print(ten + " ten(s) ");
 			}
 			while (changeDue >= 5) {
 				five++;
